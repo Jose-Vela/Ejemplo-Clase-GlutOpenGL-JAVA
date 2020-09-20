@@ -45,17 +45,15 @@ public class HolaMundoGlutOpenGL extends JFrame{
      public class GraphicListener implements GLEventListener{
 
         public void display(GLAutoDrawable arg0) {
-           //Indicamos que vamos a iniciar a crear lineas
-           //gl.glPointSize(10);
+           // Indicamos el tamaño en pixeles del grosor de la linea
            gl.glLineWidth(5);
-            
+           //Indicamos que vamos a iniciar a crear lineas
            gl.glBegin(GL.GL_LINES);
                   gl.glColor3f(1,1,1);
                   gl.glVertex2d(5,400);
                   gl.glVertex2d(300,400);
-		  //gl.glVertex2d(145.5f,95.5f);
 
-		  //Deshabilitamos la creacion de lineas (de la maquina de estados )
+            //Deshabilitamos la creacion de lineas (de la maquina de estados )
            gl.glEnd();
 
            gl.glFlush();
